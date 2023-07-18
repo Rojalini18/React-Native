@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1688462776154" clover="3.2.0">
+  <project timestamp="1688462776154" name="All files">
+    <metrics statements="99" coveredstatements="94" conditionals="8" coveredconditionals="8" methods="23" coveredmethods="22" elements="130" coveredelements="124" complexity="0" loc="99" ncloc="99" packages="1" files="4" classes="4"/>
+    <file name="Details.tsx" path="C:\Users\acer\Desktop\New folder\React-Native-Practice\newsappsocial\Pages\Details.tsx">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+    </file>
+    <file name="Home.tsx" path="C:\Users\acer\Desktop\New folder\React-Native-Practice\newsappsocial\Pages\Home.tsx">
+      <metrics statements="64" coveredstatements="59" conditionals="6" coveredconditionals="6" methods="15" coveredmethods="14"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="26" count="17" type="stmt"/>
+      <line num="27" count="17" type="stmt"/>
+      <line num="28" count="17" type="stmt"/>
+      <line num="29" count="17" type="stmt"/>
+      <line num="30" count="17" type="stmt"/>
+      <line num="31" count="17" type="stmt"/>
+      <line num="32" count="17" type="stmt"/>
+      <line num="34" count="17" type="stmt"/>
+      <line num="35" count="3" type="stmt"/>
+      <line num="36" count="3" type="stmt"/>
+      <line num="40" count="3" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="47" count="2" type="stmt"/>
+      <line num="51" count="17" type="stmt"/>
+      <line num="52" count="2" type="stmt"/>
+      <line num="55" count="17" type="stmt"/>
+      <line num="56" count="2" type="stmt"/>
+      <line num="57" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="61" count="1" type="stmt"/>
+      <line num="62" count="1" type="stmt"/>
+      <line num="63" count="1" type="stmt"/>
+      <line num="64" count="1" type="stmt"/>
+      <line num="66" count="1" type="stmt"/>
+      <line num="67" count="1" type="stmt"/>
+      <line num="71" count="0" type="stmt"/>
+      <line num="72" count="0" type="stmt"/>
+      <line num="73" count="0" type="stmt"/>
+      <line num="79" count="17" type="stmt"/>
+      <line num="80" count="5" type="stmt"/>
+      <line num="81" count="1" type="stmt"/>
+      <line num="84" count="5" type="stmt"/>
+      <line num="85" count="1" type="stmt"/>
+      <line num="86" count="1" type="stmt"/>
+      <line num="89" count="5" type="stmt"/>
+      <line num="90" count="1" type="stmt"/>
+      <line num="91" count="1" type="stmt"/>
+      <line num="92" count="1" type="stmt"/>
+      <line num="93" count="1" type="stmt"/>
+      <line num="94" count="1" type="stmt"/>
+      <line num="97" count="5" type="stmt"/>
+      <line num="99" count="1" type="stmt"/>
+      <line num="100" count="1" type="stmt"/>
+      <line num="101" count="1" type="stmt"/>
+      <line num="102" count="1" type="stmt"/>
+      <line num="105" count="5" type="stmt"/>
+      <line num="106" count="1" type="stmt"/>
+      <line num="107" count="1" type="stmt"/>
+      <line num="109" count="1" type="stmt"/>
+      <line num="111" count="0" type="stmt"/>
+      <line num="115" count="5" type="stmt"/>
+      <line num="116" count="5" type="stmt"/>
+      <line num="117" count="5" type="stmt"/>
+      <line num="118" count="5" type="stmt"/>
+      <line num="119" count="5" type="stmt"/>
+      <line num="121" count="5" type="stmt"/>
+      <line num="122" count="5" type="stmt"/>
+      <line num="126" count="17" type="stmt"/>
+      <line num="157" count="2" type="stmt"/>
+      <line num="160" count="2" type="stmt"/>
+      <line num="163" count="0" type="stmt"/>
+      <line num="189" count="1" type="stmt"/>
+    </file>
+    <file name="LoadingDots.tsx" path="C:\Users\acer\Desktop\New folder\React-Native-Practice\newsappsocial\Pages\LoadingDots.tsx">
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="11" count="3" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="13" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="25" count="3" type="stmt"/>
+      <line num="30" count="3" type="stmt"/>
+      <line num="35" count="3" type="stmt"/>
+      <line num="40" count="3" type="stmt"/>
+      <line num="58" count="2" type="stmt"/>
+    </file>
+    <file name="Login.tsx" path="C:\Users\acer\Desktop\New folder\React-Native-Practice\newsappsocial\Pages\Login.tsx">
+      <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="6" type="stmt"/>
+      <line num="17" count="6" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="42" count="6" type="stmt"/>
+      <line num="43" count="6" type="stmt"/>
+      <line num="44" count="6" type="stmt"/>
+      <line num="45" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="46" count="1" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
+      <line num="52" count="6" type="stmt"/>
+      <line num="53" count="6" type="stmt"/>
+      <line num="56" count="6" type="stmt"/>
+    </file>
+  </project>
+</coverage>
