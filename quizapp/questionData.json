@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "In which year did Virat Kohli made his T20I debut?",
+    "answer": "2010",
+    "questionOption": [""],
+    "option": [""]
+  },
+  {
+    "id": 2,
+    "question": "The Flag of the European Union has how many stars on it?",
+    "answer": "12",
+    "option": ["14", "22", "18", "12"],
+    "questionOption": [""]
+  },
+  {
+    "id": 3,
+    "question": "A plant requires what for photosynthesis?",
+    "answer": ["Water", "Sunlight"],
+    "option": ["Water", "Iron", "Sunlight", "Magnesium"],
+    "questionOption": [""]
+  },
+  {
+    "id": 4,
+    "question": "Is Antarctic Ocean, the coldest ocean on earth?",
+    "answer": "True",
+    "option": ["True", "False"],
+    "questionOption": [""]
+  },
+  {
+    "id": 5,
+    "question": "Match the following",
+    "questionOption": [
+      "How many Baloon d'Or Messi have",
+      "Which driver has been the Formula 1 world champion for a record 7 times",
+      "What is the name of Manchester United's home stadium",
+      "Who is the youngest person to recieve a Nobel Prize"
+    ],
+    "answer": ["7", "Michael Schumacher", "Old Trafford", "Malala Yousafzai"],
+    "option": ["Malala Yousafzai", "7", "Michael Schumacher", "Old Trafford"]
+  }
+]
