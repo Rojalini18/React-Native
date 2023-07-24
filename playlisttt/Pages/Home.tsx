@@ -1,32 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, Button} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {authorize, refresh} from 'react-native-app-auth';
 
 const Home = ({navigation}: any) => {
   const config = {
-    clientId: '0184245f21d94204b9d35c41f4fe2734',
-    clientSecret: '954192e2512e47efabb134f74f0517a1',
-    redirectUrl: 'https://sportifyapp.org/callback',
+    clientId: '348e7c5f28da4e8f8c74c6e75d43bd15',
+    clientSecret: '66fe37994ae644b892b5b8fe05e08d28',
+    redirectUrl: 'com.playlisttt:/oauth',
     scopes: [
       'user-read-email',
-      'user-library-read',
-      'user-read-recently-played',
-      'user-top-read',
+      'playlist-modify-public',
+      'user-read-private',
       'playlist-read-private',
       'playlist-read-collaborative',
-      'playlist-modify-public',
     ],
     serviceConfiguration: {
       authorizationEndpoint: 'https://accounts.spotify.com/authorize',
       tokenEndpoint: 'https://accounts.spotify.com/api/token',
-      revocationEndpoint: 'https://accounts.spotify.com/api/token',
     },
   };
 
   const handleLogin = async () => {
     try {
       const result = await authorize(config);
+      console.log(result);
       if (result.accessToken) {
         await AsyncStorage.setItem('token', result.accessToken);
         navigation.navigate('Playlist');
@@ -54,6 +52,16 @@ const Home = ({navigation}: any) => {
       }
     }
   };
+
+  useEffect(() => {
+    const checkToken = async () => {
+      const token = await AsyncStorage.getItem('token');
+      if (token) {
+        navigation.navigate('Playlist');
+      }
+    };
+    checkToken();
+  }, [navigation]);
 
   return (
     <View
