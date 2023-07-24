@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View, Button} from 'react-native';
+import {View, Button, StyleSheet} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {authorize, refresh} from 'react-native-app-auth';
 
@@ -24,7 +24,7 @@ const Home = ({navigation}: any) => {
   const handleLogin = async () => {
     try {
       const result = await authorize(config);
-      console.log(result);
+      //console.log(result);
       if (result.accessToken) {
         await AsyncStorage.setItem('token', result.accessToken);
         navigation.navigate('Playlist');
@@ -36,22 +36,22 @@ const Home = ({navigation}: any) => {
     }
   };
 
-  const refreshToken = async () => {
-    const token = await AsyncStorage.getItem('token');
-    console.log('Acees Token', token);
-    if (token) {
-      try {
-        const result = await refresh(config, {refreshToken: token});
-        if (result.accessToken) {
-          await AsyncStorage.setItem('token', result.accessToken);
-        } else {
-          console.log('Access token not found in refresh response.');
-        }
-      } catch (error) {
-        console.log('Token refresh error:', error);
-      }
-    }
-  };
+  // const refreshToken = async () => {
+  //   const token = await AsyncStorage.getItem('token');
+  //   console.log('Acees Token', token);
+  //   if (token) {
+  //     try {
+  //       const result = await refresh(config, {refreshToken: token});
+  //       if (result.accessToken) {
+  //         await AsyncStorage.setItem('token', result.accessToken);
+  //       } else {
+  //         console.log('Access token not found in refresh response.');
+  //       }
+  //     } catch (error) {
+  //       console.log('Token refresh error:', error);
+  //     }
+  //   }
+  // };
 
   useEffect(() => {
     const checkToken = async () => {
@@ -64,18 +64,21 @@ const Home = ({navigation}: any) => {
   }, [navigation]);
 
   return (
-    <View
-      style={{
-        flex: 1,
-        height: 10,
-        width: 180,
-        marginLeft: 90,
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+    <View style={styles.container}>
       <Button title="Login with Spotify" onPress={handleLogin} />
     </View>
   );
 };
 
 export default Home;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    height: 10,
+    width: 180,
+    marginLeft: 90,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

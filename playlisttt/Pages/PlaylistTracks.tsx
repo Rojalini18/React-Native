@@ -23,11 +23,14 @@ const PlaylistTracksScreen = ({navigation, route}: any) => {
           <TouchableOpacity onPress={() => handleTrackPress(item)}>
             <View style={styles.trackItemContainer}>
               <Image
+                testID="trackImage-track1"
                 source={{uri: item.album.images[0].url}}
                 style={styles.trackImage}
               />
               <View style={styles.trackDetailsContainer}>
-                <Text style={styles.trackName}>{item.name}</Text>
+                <Text testID="Track 1" style={styles.trackName}>
+                  {item.name}
+                </Text>
                 <Text style={styles.artistName}>{item.artists}</Text>
               </View>
             </View>

@@ -3,7 +3,7 @@ import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import TrackPlayer, {useProgress} from 'react-native-track-player';
 import Slider from '@react-native-community/slider';
 
-const SongPlayerScreen = ({navigation, route}: any) => {
+const SongPlayerScreen = ({route}: any) => {
   const {track} = route.params;
   const [isPlaying, setIsPlaying] = useState(false);
   const progress = useProgress();
@@ -39,10 +39,6 @@ const SongPlayerScreen = ({navigation, route}: any) => {
     setIsPlaying(!isPlaying);
   };
 
-  const handlePrev = () => {};
-
-  const handleNext = () => {};
-
   const handleSeek = async (value: number) => {
     await TrackPlayer.seekTo(value);
   };
@@ -50,15 +46,20 @@ const SongPlayerScreen = ({navigation, route}: any) => {
   return (
     <View style={styles.container}>
       <Image
+        testID="trackImage"
         source={{uri: track.album.images[0].url}}
         style={styles.trackImage}
       />
       <View style={styles.trackDetailsContainer}>
-        <Text style={styles.trackName}>{track.name}</Text>
-        <Text style={styles.artistName}>{track.artists}</Text>
+        <Text testID="Track 1" style={styles.trackName}>
+          {track.name}
+        </Text>
+        <Text testID="Artist 1" style={styles.artistName}>
+          {track.artists}
+        </Text>
       </View>
       <View style={styles.controlsContainer}>
-        <TouchableOpacity onPress={handlePrev}>
+        <TouchableOpacity>
           <Image
             source={require('../assets/Prev.png')}
             style={styles.controlImage}
@@ -66,6 +67,7 @@ const SongPlayerScreen = ({navigation, route}: any) => {
         </TouchableOpacity>
         <TouchableOpacity onPress={handlePlayPause}>
           <Image
+            testID="playPauseButton"
             source={
               isPlaying
                 ? require('../assets/Pause.png')
@@ -74,7 +76,7 @@ const SongPlayerScreen = ({navigation, route}: any) => {
             style={styles.controlImage}
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={handleNext}>
+        <TouchableOpacity>
           <Image
             source={require('../assets/Next.png')}
             style={styles.controlImage}
@@ -82,10 +84,11 @@ const SongPlayerScreen = ({navigation, route}: any) => {
         </TouchableOpacity>
       </View>
       <Slider
+        testID="slider"
         style={styles.slider}
         minimumValue={0}
-        maximumValue={progress.duration} 
-        value={progress.position} 
+        maximumValue={progress.duration}
+        value={progress.position}
         onSlidingComplete={handleSeek}
         minimumTrackTintColor="#000"
         maximumTrackTintColor="#888"
